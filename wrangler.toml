@@ -1,0 +1,10 @@
+name = "typeform-worker"
+main = "src/worker.ts"
+compatibility_date = "2024-01-01"
+
+[vars]
+# You can set default values here for development
+TYPEFORM_FORM_ID = "your_form_id"
+
+# For the API key, you should set it as a secret
+# Use: wrangler secret put TYPEFORM_API_KEY 

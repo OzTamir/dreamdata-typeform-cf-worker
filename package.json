@@ -1,0 +1,15 @@
+{
+  "name": "typeform-worker",
+  "version": "1.0.0",
+  "description": "Cloudflare Worker for Typeform response handling",
+  "main": "src/worker.ts",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240208.0",
+    "typescript": "^5.0.0",
+    "wrangler": "^3.0.0"
+  }
+}
