@@ -1,3 +1,5 @@
+/// <reference types="@cloudflare/workers-types" />
+
 export interface Env {
   TYPEFORM_API_KEY: string;
   TYPEFORM_FORM_ID: string;
@@ -41,7 +43,9 @@ export default {
         throw new Error(`Typeform API error: ${typeformResponse.statusText}`);
       }
 
-      const data = await typeformResponse.json();
+      const data = await typeformResponse.json() as any;
+
+      console.log(data);
 
       // Find the email field in the response
       const answers = data.items?.[0]?.answers || [];
